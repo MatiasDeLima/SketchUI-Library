@@ -1,4 +1,4 @@
-![SketchUI.js Logo](./SkectUI-logo.png)
+![SketchUI.js Logo](./preview.png)
 
 ## Installation
 
