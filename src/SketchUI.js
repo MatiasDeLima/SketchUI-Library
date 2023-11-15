@@ -1,6 +1,6 @@
 import "./SketchUI.css"
-import * as SketchUI from "./Components.js"
+import * as SketchUI from "./components/index.js";
 
-export * from "./Components.js"
+export * from "./components/index.js"
 
 export default SketchUI;
