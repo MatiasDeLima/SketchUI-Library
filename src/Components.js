@@ -199,3 +199,44 @@ export class Services {
         `;
     }
 }
+
+export class Form {
+    constructor(options) {
+        const {
+
+        } = options;
+
+        this.inputs = inputs;
+    }
+    
+    createForm() {
+        const form = document.querySelector(".form");
+
+        const formInputs = this.inputs
+        .map((input) => `
+            <div class="form__input">
+                <i class="${input.icon}"></i>
+                <input type="${input.type}" placeholder="${input.placeholder}">
+            </div>
+        `).join("");
+
+        form.innerHTML = `
+            <h3 class="form__title"></h3>
+
+            <div class="form__inputs">
+               ${formInputs}
+            </div>
+
+            <label>
+                <input type="checkbox">
+                <p class="form__terms"></p>
+            </label>
+
+            <p class="form__error"></p>
+
+            <button class="button"></button>
+
+            <p class="form__text"></p>
+        `;
+    }
+}
