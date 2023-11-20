@@ -1,6 +1,5 @@
-/* ###### INDEX ###### */
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap");
 
 @import url('./css/form.css');
 
@@ -8,27 +7,36 @@
 :root {
   --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
-  --first-color: #da22ff;
-  --first-color-alt: #;
-  --title-color: #;
-  --text-color: #;
-  --text-color-light: #;
+ /*========== Colors ==========*/
+ --first-color: #3361ff;
+ --first-color-alt: #1c4ef9;
+ --title-color: #1a2947;
+ --title-color-light: #4d5e80;
+ --text-color: #adb8cc;
+ --icon-color: #7d8fb3;
+ --container-color: #f5f7fc;
+ --border-color: #f2f3f5;
+ --white-color: #fff;
+
+ --green-color: #3ead81;
+ --red-color: #fe2b5f;
+ --green-color-light: #f5fbf8;
+ --red-color-light: #fff4f7;
+ --blue-color-light: #f5f7ff;
 
 
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
-  --biggest-font-size: 2rem;
+  --body-font: "Roboto", sans-serif;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --h4-font-size: 1rem;
+  --normal-font-size: 0.875rem;
+  --small-font-size: 0.75rem;
 
   /*========== Font weight ==========*/
   --font-medium: 500;
-  --font-semi-bold: 600;
+  --font-bold: 600;
   --font-black: 900;
 
   /*========== z index ==========*/
@@ -70,7 +78,7 @@ body{
 
 h1,h2,h3,h4{
   color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-bold);
 }
 
 ul{
@@ -90,6 +98,19 @@ button,
 input{
   border: none;
   outline: none;
+}
+
+input {
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+input::placeholder {
+  font-family: var(--body-font);
+  color: var(--text-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
 }
 
 button{
@@ -114,6 +135,22 @@ button{
 
 .main{
   overflow: hidden; /*For animation*/
+}
+
+/*=============== BUTTONS ===============*/
+.button {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  border-radius: 0.25rem;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-weight: var(--font-bold);
+  transition: background 0.3s;
+  font-size: var(--normal-font-size);
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
 }
 
 /* ###### HEADER ###### */
