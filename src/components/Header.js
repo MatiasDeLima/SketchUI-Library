@@ -2,11 +2,11 @@
 export class Header {
     constructor(config) {
         const {
-            logoText = "",
-            logoUrl = "",
-            links = [],
-            buttons = [],
-            buttonText = ""
+            logoText,
+            logoUrl,
+            links,
+            buttons,
+            buttonText
         } = config;
 
         this.logoText = logoText;
@@ -54,37 +54,44 @@ export class Header {
             `).join("");
 
         header.innerHTML = `
-            <header class="header">
-                <nav class="nav container">
-                    <a href="${this.logoUrl}" class="nav__logo">${this.logoText}</a>
+            <div class="search__content" id="search-modal">
+                <label class="search__input form__input">
+                    <i class="ri-search-line"></i>
+                    <input type="search" placeholder="Search Now..." id="search-input">
+                </label>
 
-                    <div class="nav__menu" id="nav-menu">
-                        <ul class="nav__list">
-                            ${linksHTML}
-                        </ul>
+                <button class="button button-center">Search</button>
+            </div>
 
-                        <div class="nav__close" id="nav-close">
-                            <i class="ri-close-line"></i>
+            <nav class="nav container">
+                <a href="${this.logoUrl}" class="nav__logo">${this.logoText}</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        ${linksHTML}
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__buttons">
+                    <button class="button nav__button">${this.buttonText}</button>
+
+                    <ul class="nav__icons">
+                        ${buttonsHTML}
+
+                        <div class="nav__toggle" id="nav-toggle">
+                            <i class="ri-menu-line"></i>
                         </div>
-                    </div>
-
-                    <div class="nav__buttons">
-                        <button class="button nav__button">${this.buttonText}</button>
-
-                        <ul class="nav__icons">
-                            ${buttonsHTML}
-
-                            <div class="nav__toggle" id="nav-toggle">
-                                <i class="ri-menu-line"></i>
-                            </div>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
+                    </ul>
+                </div>
+            </nav>
         `;
 
 
-        // Adicione event listeners para os métodos privados do componente
+        // SHOW AND HIDEN MENU
         const navToggle = document.getElementById("nav-toggle");
         const navClose = document.getElementById("nav-close");
 
@@ -95,5 +102,17 @@ export class Header {
         if (navClose) {
             navClose.addEventListener("click", this._closeMenu.bind(this));
         }
+
+        // SHOW AND HIDEN SEARCH MODAL
+        const showSearchModal = (content, button) => {
+            const searchModal = document.getElementById(content),
+            searchButton = document.getElementById(button)
+        
+            searchButton.addEventListener("click", () => {
+                searchModal.classList.toggle("show-search");
+            })
+        }
+        
+        showSearchModal("search-modal", "search-toggle")
     }
 }
