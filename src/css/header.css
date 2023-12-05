@@ -34,8 +34,9 @@
 }
 
 .nav__logo {
-  font-weight: var(--font-medium);
-  color: var(--title-color);
+  display: flex;
+  align-items: center;
+  width: 100px;
 }
 
 .nav__toggle {

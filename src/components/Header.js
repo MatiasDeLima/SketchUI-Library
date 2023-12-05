@@ -2,14 +2,14 @@
 export class Header {
     constructor(config) {
         const {
-            logoText,
+            logoImage,
             logoUrl,
             links,
             buttons,
             buttonText
         } = config;
 
-        this.logoText = logoText;
+        this.logoImage = logoImage;
         this.logoUrl = logoUrl;
         this.links = links;
         this.buttons = buttons;
@@ -64,7 +64,9 @@ export class Header {
             </div>
 
             <nav class="nav container">
-                <a href="${this.logoUrl}" class="nav__logo">${this.logoText}</a>
+                <a href="${this.logoUrl}" class="nav__logo">
+                    <img src="${this.logoImage}" >
+                </a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
