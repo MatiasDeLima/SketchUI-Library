@@ -36,3 +36,13 @@ button {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
 }
+
+.button-ghost {
+  text-align: center;
+  background: none;
+  color: var(--title-color);
+}
+
+.button-ghost:hover {
+  background: none;
+}

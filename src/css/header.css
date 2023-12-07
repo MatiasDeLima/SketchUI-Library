@@ -78,6 +78,14 @@
   color: var(--title-color);
 }
 
+.nav__menu-buttons {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  margin-right: auto; 
+  justify-content: flex-start;
+}
+
 .show-menu {
   right: 0;
 }

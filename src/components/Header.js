@@ -71,6 +71,11 @@ export class Header {
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         ${linksHTML}
+
+                        <div class="nav__menu-buttons">
+                            <a href="" class="button">Register</a>
+                            <a href="" class="button button-ghost">Login</a>
+                        </div>
                     </ul>
 
                     <div class="nav__close" id="nav-close">

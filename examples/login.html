@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SketchUI - Website</title>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
 
     <link rel="stylesheet" href="../dist/SketchUI.css">
 </head>
@@ -16,13 +18,17 @@
     <main class="main">
         <section class="hero section"></section>
 
-        <section class="section">
-            <form action="" class="form" id="form"></form>
+        <section class="login section">
+            <div class="form__container container grid">
+                <form class="form" id="form"></form>
+            </div>
         </section>
     </main>
     
     <script src="../dist/SketchUI.js" type="module"></script>
 
-    <script src="./index.js" type="module"></script>
+    <script src="./js/header.js" type="module"></script>
+
+    <script src="./js/login.js" type="module"></script>
 </body>
 </html>
